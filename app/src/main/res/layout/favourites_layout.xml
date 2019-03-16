@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/fav_event_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="2dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/fav_event_title"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_event_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="75dp"
+            android:text="Event Title"
+            android:textColor="@android:color/black"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/fav_event_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_event_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="268dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="Event Date"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/fav_event_location"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_event_title"
+            android:layout_alignStart="@+id/event_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginBottom="5dp"
+            android:text="Event Location"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnFav"
+            android:src="@drawable/heart"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:layout_below="@+id/fav_event_image"
+            android:layout_alignRight="@id/fav_event_image"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-20dp" />
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+

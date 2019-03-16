@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCategory">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/adminViewOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Views Orders"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <TextView
+                    android:id="@+id/adminLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log Out"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Add New Event"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/linear1_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/add_nightclub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Add New Nightclub Event"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+
+        <ImageView
+            android:id="@+id/nightclub"
+            android:layout_width="205dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/add_nightclub"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/nightclub" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/linear2_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1_category_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/add_festival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Add New Festival Event"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+
+        <ImageView
+            android:id="@+id/musicFestival"
+            android:layout_width="205dp"
+            android:layout_height="200dp"
+            android:src="@drawable/musicfestival"
+            android:layout_below="@+id/add_festival"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="-30dp"
+            />
+
+        <!--<Button-->
+            <!--android:id="@+id/check_order_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_margin="20dp"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:text="Check Orders"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="20dp"-->
+            <!--android:layout_below="@+id/musicFestival"-->
+            <!--/>-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

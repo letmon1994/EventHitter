@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="#0e0d0e"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            >
+
+            <ImageView
+                android:id="@+id/img_event"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:title="Event Name"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="parallax"
+                />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnCart"
+        android:src="@drawable/shoppingcart"
+        android:backgroundTint="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right|end"
+        app:useCompatPadding="true"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnFav"
+        android:src="@drawable/heart2"
+        android:backgroundTint="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|left|end"
+        app:useCompatPadding="true"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardMaxElevation="5dp"
+                app:cardUseCompatPadding="true"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/eventName"
+                        android:layout_marginTop="8dp"
+                        android:padding="12dp"
+                        android:text="Event Name"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/date"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/calender"
+                            android:src="@drawable/calender"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/eventDate"
+                            android:text="Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="6dp"
+                            android:textStyle=""
+                            android:layout_width="0dp"
+                            android:layout_weight="9"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="45dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eventTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dp"
+                            android:layout_weight="9"
+                            android:text="Time"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:src="@drawable/location" />
+
+                        <TextView
+                            android:id="@+id/eventLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="9"
+                            android:text="Location"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="45dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eventAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dp"
+                            android:layout_weight="9"
+                            android:text="Address"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:src="@drawable/tickets" />
+
+                        <ImageView
+                            android:src="@drawable/ic_euro_symbol_black_24dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="15dp" />
+
+                        <TextView
+                            android:id="@+id/eventTicketPrice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_weight="9"
+                            android:text="Tickt Price"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="45dp"
+                        android:orientation="horizontal">
+
+                        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/number_button"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="18dp"
+                            app:textSize="8dp"
+                            app:backGroundColor="@color/colorPrimaryDark"
+                            app:initialNumber="1"
+                            app:finalNumber="20"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eventDescription"
+                            android:lineSpacingMultiplier="1.5"
+                            android:padding="12dp"
+                            android:text="Description"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/event_image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/event_price"
+                        android:text="image Link"
+                        android:layout_marginTop="2dp"
+                        android:textAlignment="center"
+                        android:textSize="0dp"
+                        android:visibility="invisible"
+                        android:textColor="@android:color/black"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/addComment"
+                            android:text="Add a comment"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center_vertical|start"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle=""
+                            android:layout_width="0dp"
+                            android:layout_weight="9"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/postBtn"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Post"
+                            android:textSize="14dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@id/users_adress"/>
+
+                        <EditText
+                            android:id="@+id/postName"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:inputType="textMultiLine"
+                            android:padding="5dp"
+                            android:layout_marginTop="5dp"
+                            android:hint="Enter Name"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/input_design"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+
+                        <EditText
+                            android:id="@+id/postComment"
+                            android:layout_width="260dp"
+                            android:layout_height="40dp"
+                            android:inputType="textMultiLine"
+                            android:layout_marginTop="5dp"
+                            android:hint="Enter Comment"
+                            android:padding="5dp"
+                            android:layout_marginLeft="74dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/input_design"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eventLocation2"
+                            android:text="Location"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle=""
+                            android:layout_width="0dp"
+                            android:layout_weight="9"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eventLocation3"
+                            android:text="Location"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle=""
+                            android:layout_width="0dp"
+                            android:layout_weight="9"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            tools:context=".Maps" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
